@@ -1,7 +1,26 @@
+*{
+color: honeydew;
+}
 
-table,tr,th,td{
-    margin-top: 30px;
-    border: 2px solid #000000;
-    padding: 3rem 4rem;
-    background: #c7ff73;
+table,
+tr,
+th,
+td {
+    border: 2px solid #c4c4c4;
+    /* border-bottom: 2px solid #c4c4c4; */
+    padding: 1rem;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.container {
+    background: #b83348;
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    border-radius: 12px;
+    box-shadow: 2px 3px 12px #b83348;
 }

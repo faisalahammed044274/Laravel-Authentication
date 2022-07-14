@@ -18,11 +18,31 @@ class StudentController extends Controller
         return view('create');
     }
 
+    public function edit($id)
+    {
+        $student = Student::find($id);
+        return view('edit')->with('student', $student);
+    }
+
     public function store(Request $request)
     {
         // dd('submitted');
 
         $student = new Student;
+        $student->registration_id = $request->registration_id;
+        $student->name = $request->name;
+        $student->department_name = $request->department_name;
+        $student->info = $request->info;
+        $student->save();
+
+        return redirect()->route('index');
+    }
+
+    public function update(Request $request, $id)
+    {
+        // dd('submitted');
+
+        $student = Student::find($id);
         $student->registration_id = $request->registration_id;
         $student->name = $request->name;
         $student->department_name = $request->department_name;

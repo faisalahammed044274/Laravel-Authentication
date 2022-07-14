@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        @yield('title','Student Management')
+        @yield('title', 'Student Management')
     </title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('custom.css') }}">
@@ -40,7 +40,9 @@
     <div class="container">
         @yield('content')
     </div>
+    <script src="{{ asset('jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('parsley.min.js') }}"></script>
 </body>
 
 </html>

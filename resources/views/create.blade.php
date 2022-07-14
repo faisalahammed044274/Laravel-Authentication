@@ -5,7 +5,7 @@
 @section('content')
     <h2>Create New Student</h2>
 
-    <form action="{{ route('store') }}" method="post">
+    <form action="{{ route('store') }}" method="post" data-parsley-validate>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -23,17 +23,17 @@
         <div class="form-group">
             <label for="control-label col-sm-2" for="name">Name :</label>
             <div class="col-sm-10">
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="name" id="name" class="form-control" maxlength="10"required>
             </div>
             <div class="form-group">
                 <label for="control-label col-sm-2" for="registration_id">Registration No :</label>
                 <div class="col-sm-10">
-                    <input type="number" name="registration_id" id="registration_id" class="form-control">
+                    <input type="number" name="registration_id" id="registration_id" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="control-label col-sm-2" for="department_name">Department :</label>
                     <div class="col-sm-10">
-                        <input type="text" name="department_name" id="department_name" class="form-control">
+                        <input type="text" name="department_name" id="department_name" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">

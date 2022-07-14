@@ -1,5 +1,7 @@
 @extends('layouts.master');
-
+@section('title')
+    Update Student | Student Management
+@endsection
 @section('content')
     <h2>Update Student Data</h2>
 

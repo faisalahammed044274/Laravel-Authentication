@@ -1,9 +1,24 @@
 @extends('layouts.master');
-
+@section('title')
+    Create Student | Student Management
+@endsection
 @section('content')
     <h2>Create New Student</h2>
 
     <form action="{{ route('store') }}" method="post">
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <small>
+                            <li>{{ $error }}</li>
+                        </small>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         {{ csrf_field() }}
         <div class="form-group">
             <label for="control-label col-sm-2" for="name">Name :</label>

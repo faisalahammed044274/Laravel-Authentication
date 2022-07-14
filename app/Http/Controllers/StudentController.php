@@ -28,6 +28,14 @@ class StudentController extends Controller
     {
         // dd('submitted');
 
+        //Check Validation
+        $this->validate($request, [
+            'name'              => 'required|string|max:10',
+            'registration_id'   => 'required|integer',
+            'department_name'   => 'required|string',
+            'info'              => 'nullable',
+        ]);
+
         $student = new Student;
         $student->registration_id = $request->registration_id;
         $student->name = $request->name;
@@ -49,6 +57,13 @@ class StudentController extends Controller
         $student->info = $request->info;
         $student->save();
 
+        return redirect()->route('index');
+    }
+
+    public function delete($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
         return redirect()->route('index');
     }
 }

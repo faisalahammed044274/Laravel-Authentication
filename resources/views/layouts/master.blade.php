@@ -30,10 +30,21 @@
                         <a class="nav-link" href="{{ route('create') }}">Create</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <ul class="navbar-nav navbar-right">
+                    @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ route('index') }}">Dashboard</a>
+                    </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endif
+                </ul>
+
             </div>
         </div>
     </nav>

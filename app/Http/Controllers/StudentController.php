@@ -31,7 +31,7 @@ class StudentController extends Controller
         //Check Validation
         $this->validate($request, [
             'name'              => 'required|string|max:10',
-            'registration_id'   => 'required|integer|max:8',
+            'registration_id'   => 'required|integer',
             'department_name'   => 'required|string',
             'info'              => 'nullable',
         ]);

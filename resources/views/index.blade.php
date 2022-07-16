@@ -32,24 +32,25 @@
 
     </table> --}}
 
-    @if (Auth::check())
-        <div class="alert alert-success">
-            ||---
-            Form : {{ Auth::user()->address->street }} ---||---
-            User : {{ Auth::user()->name }} ---||---
-            User Email : {{ Auth::user()->email }}
-            ---||
-        </div>
-    @endif
+    <center>
+        @if (Auth::check())
+            <div class="alert alert-success">
+                ||---
+                Form : {{ Auth::user()->address->street }} ---||---
+                User : {{ Auth::user()->name }} ---||---
+                User Email : {{ Auth::user()->email }}
+                ---||
+            </div>
+        @endif
+    </center>
 
     @foreach ($posts as $post)
         <hr class="divideHr">
         <div class="panel panel-default">
-            <div class="panel-body" style="margin: 30px">
+            <div class="panel-body">
                 <h3>{{ $post->title }}</h3>
                 <p>
                     on {{ $post->category->name }} Category,
-                    <br>
                     Posted by {{ $post->user->name }}
                 </p>
                 <hr>

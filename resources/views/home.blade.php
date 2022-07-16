@@ -1,29 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="background: green; color:whitesmoke; padding:3rem; border-radius:12px;">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                {{-- @if (Auth::check())
-                    <div class="alert alert-success">
-                        Form - {{ Auth::user()->address->street }}
-                    </div>
-                @endif
-
-                @foreach ($posts as $post)
+                @foreach (Auth::user()->posts as $post)
+                    <hr style="background:red; border:2px solid red;">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h3>{{ $post->title }}</h3>
                             <p>
-                                in {{ $post->category->name }}
-                                by {{ $post->user->name }}
+                                on {{ $post->category->name }} Category,
+                                Posted by {{ $post->user->name }}
                             </p>
+                            <hr>
                             <div class="">
                                 {!! $post->description !!}
                             </div>
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>

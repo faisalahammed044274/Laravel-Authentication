@@ -27,7 +27,7 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('create') }}">Create</a>
+                        <a class="nav-link" href="{{ route('create') }}">Create Student</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-right">

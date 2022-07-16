@@ -10,7 +10,7 @@ class PageController extends Controller
     {
 
         $posts = Post::orderBY('id', 'desc')->get();
-        // return view('home', ['posts' => $posts]);
         return view('index')->withPosts($posts);
+        // return view('index', ['posts' => $posts]);
     }
 }

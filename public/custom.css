@@ -1,29 +1,25 @@
 * {
-    color: #555555;
+    color: #ffffff;
 }
 
 table,
 tr,
 th,
 td {
-    border: 2px solid #555555;
+    border: 2px solid #006834;
     /* border-bottom: 2px solid #c4c4c4; */
     padding: 1rem;
 }
 
-h2 {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 .divideHr {
     display: block;
-    border: 1px solid #676767;
-    background: #616161;
-    padding: 2px;
+    border: 1px solid #414141;
+    background: #ffffff;
+    padding: 3px;
 }
 
 .container {
-    background: #cacaca;
+    background: #008311;
     padding: 20px;
     margin-top: 2rem;
     margin-bottom: 6rem;

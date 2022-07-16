@@ -33,7 +33,7 @@
                 <ul class="navbar-nav navbar-right">
                     @if (Auth::check())
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('index') }}">Dashboard</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('home') }}">Dashboard</a>
                     </li>
                     @else
                         <li class="nav-item">

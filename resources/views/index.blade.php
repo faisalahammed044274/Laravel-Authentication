@@ -1,7 +1,7 @@
 @extends('layouts.master');
 
 @section('content')
-    <table>
+    {{-- <table>
         <tr>
             <th>SI</th>
             <th>Name</th>
@@ -30,5 +30,33 @@
             </tr>
         @endforeach
 
-    </table>
+    </table> --}}
+
+    @if (Auth::check())
+        <div class="alert alert-success">
+            ||---
+            Form : {{ Auth::user()->address->street }} ---||---
+            User : {{ Auth::user()->name }} ---||---
+            User Email : {{ Auth::user()->email }}
+            ---||
+        </div>
+    @endif
+
+    @foreach ($posts as $post)
+        <hr class="divideHr">
+        <div class="panel panel-default">
+            <div class="panel-body" style="margin: 30px">
+                <h3>{{ $post->title }}</h3>
+                <p>
+                    on {{ $post->category->name }} Category,
+                    <br>
+                    Posted by {{ $post->user->name }}
+                </p>
+                <hr>
+                <div class="">
+                    {!! $post->description !!}
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection

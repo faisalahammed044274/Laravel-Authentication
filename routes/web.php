@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\StudentController;
 
-Route::get('/', [StudentController::class, 'index'])->name('index');
+Route::get('/', [PageController::class, 'index'])->name('index');
+
+// Route::get('/', [StudentController::class, 'index'])->name('index');
 Route::get('/create', [StudentController::class, 'create'])->name('create');
 Route::get('/edit/{id}', [StudentController::class, 'edit'])->name('edit');
 

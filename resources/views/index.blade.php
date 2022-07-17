@@ -37,7 +37,6 @@
             <div class="alert alert-success">
                 ||---
                 Form : {{ Auth::user()->address->street }} ---||---
-                User : {{ Auth::user()->name }} ---||---
                 User Email : {{ Auth::user()->email }}
                 ---||
             </div>
@@ -55,6 +54,13 @@
                 </p>
                 <hr>
                 <div class="">
+                    @foreach ($post->images as $image)
+
+                        <img src="images/{{ $image->image }}" alt="img">
+
+                        {{-- <img src="http://laracrud.test/assets/images/{{ $image->image }}"> --}}
+                    @endforeach
+                    <br>
                     {!! $post->description !!}
                 </div>
             </div>

@@ -64,3 +64,10 @@ textarea.parsley-error {
 }
 
 /* pasley Js CSS close*/
+
+img {
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+}
+

@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container" style="background: green; color:whitesmoke; padding:3rem; border-radius:12px;">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 card-body">
                 @foreach (Auth::user()->posts as $post)
-                    <hr style="background:red; border:2px solid red;">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
+                    <hr style="margin:12px;">
+                    <div class="card panel-default">
+                        <div class="card-body" style="background: green; color:whitesmoke;">
                             <h3>{{ $post->title }}</h3>
                             <p>
                                 on {{ $post->category->name }} Category,
@@ -15,6 +15,11 @@
                             </p>
                             <hr>
                             <div class="">
+                                @foreach ($post->images as $image)
+                                    <img style="width: 80px; height:80px;" src="/images/{{ $image->image }}"
+                                        alt="PostImage">
+                                @endforeach
+                                <br>
                                 {!! $post->description !!}
                             </div>
                         </div>

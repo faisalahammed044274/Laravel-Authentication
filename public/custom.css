@@ -11,13 +11,6 @@ td {
     padding: 1rem;
 }
 
-.divideHr {
-    display: block;
-    border: 1px solid #414141;
-    background: #ffffff;
-    padding: 3px;
-}
-
 .container {
     background: #008311;
     padding: 20px;
@@ -67,7 +60,7 @@ textarea.parsley-error {
 
 img {
     height: 100px;
-    width: 100px;
-    margin: 30px;
+    width: 50px;
+    margin: 10px;
 }
 

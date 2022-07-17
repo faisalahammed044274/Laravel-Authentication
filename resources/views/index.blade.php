@@ -45,8 +45,8 @@
 
     @foreach ($posts as $post)
         <hr class="divideHr">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card panel-default">
+            <div class="card-body" style="background: green;">
                 <h3>{{ $post->title }}</h3>
                 <p>
                     on {{ $post->category->name }} Category,
@@ -55,7 +55,6 @@
                 <hr>
                 <div class="">
                     @foreach ($post->images as $image)
-
                         <img src="images/{{ $image->image }}" alt="img">
 
                         {{-- <img src="http://laracrud.test/assets/images/{{ $image->image }}"> --}}

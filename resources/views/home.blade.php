@@ -5,9 +5,8 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 card-body">
                 @foreach (Auth::user()->posts as $post)
-                    <hr style="margin:12px;">
-                    <div class="card panel-default">
-                        <div class="card-body" style="background: green; color:whitesmoke;">
+                    <div class="card panel-default" style="margin: 10px;">
+                        <div class="card-body" style="background: #81ff81; color:#5c5c5c;">
                             <h3>{{ $post->title }}</h3>
                             <p>
                                 on {{ $post->category->name }} Category,

@@ -1,23 +1,14 @@
-* {
-    color: #ffffff;
-}
-
-table,
-tr,
-th,
-td {
-    border: 2px solid #006834;
-    /* border-bottom: 2px solid #c4c4c4; */
-    padding: 1rem;
-}
-
 .container {
     background: #008311;
-    padding: 20px;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
+    padding: 2rem;
+    margin: 2rem;
     border-radius: 12px;
     box-shadow: 2px 3px 12px #8d8d8d;
+    text-align: center;
+}
+
+.card{
+    margin: 1rem;
 }
 
 /* pasley Js CSS start */
@@ -60,7 +51,6 @@ textarea.parsley-error {
 
 img {
     height: 100px;
-    width: 50px;
+    width: 100px;
     margin: 10px;
 }
-

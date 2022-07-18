@@ -1,4 +1,4 @@
-@extends('layouts.master');
+@extends('layouts.master')
 
 @section('content')
     {{-- <table>
@@ -44,9 +44,8 @@
     </center>
 
     @foreach ($posts as $post)
-        <hr class="divideHr">
         <div class="card panel-default">
-            <div class="card-body" style="background: green;">
+            <div class="card-body" style="background: #81ff81; color:#5c5c5c;">
                 <h3>{{ $post->title }}</h3>
                 <p>
                     on {{ $post->category->name }} Category,
@@ -56,8 +55,6 @@
                 <div class="">
                     @foreach ($post->images as $image)
                         <img src="images/{{ $image->image }}" alt="img">
-
-                        {{-- <img src="http://laracrud.test/assets/images/{{ $image->image }}"> --}}
                     @endforeach
                     <br>
                     {!! $post->description !!}
